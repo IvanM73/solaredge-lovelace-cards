@@ -1,0 +1,60 @@
+type: custom:apexcharts-card
+header:
+  title: Produzione e consumo
+  show: true
+  show_states: true
+  colorize_states: true
+  standard_format: true
+  disable_actions: true
+apex_config:
+  chart:
+    height: 200
+    tipe: area
+  stroke:
+    width: 1
+    curve: smooth
+  legend:
+    show: false
+graph_span: 24h
+span:
+  start: day
+series:
+  - entity: sensor.solar_panel_production_w
+    type: area
+    extend_to: false
+    name: Produzione solare
+    color: rgb(0,255,0)
+    opacity: 1
+    fill_raw: last
+    show:
+      extremas: max
+  - entity: sensor.solar_panel_to_battery_w
+    type: area
+    extend_to: false
+    name: To Battery
+    color: rgb(0,255,255)
+    opacity: 1
+    fill_raw: last
+  - entity: sensor.solar_battery_to_house_w
+    type: area
+    extend_to: false
+    name: From Battery
+    color: rgb(125,255,0)
+    opacity: 1
+    fill_raw: last
+  - entity: sensor.solar_house_consumption_w
+    type: area
+    extend_to: false
+    name: Consumo
+    color: rgb(250,0,0)
+    opacity: 1
+    fill_raw: last
+    show:
+      extremas: max
+  - entity: sensor.solaredge_i1_ac_power
+    type: area
+    extend_to: false
+    name: Autoconsumo
+    color: rgb(125,255,0)
+    opacity: 1
+    fill_raw: last

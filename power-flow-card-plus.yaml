@@ -1,0 +1,74 @@
+type: custom:power-flow-card-plus
+entities:
+  grid:
+    display_state: one_way
+    color_circle: true
+    display_zero_tolerance: 10
+    entity:
+      consumption: sensor.solar_grid_to_house_w
+      production: sensor.solar_panel_to_grid_w
+    color:
+      consumption:
+        - 255
+        - 51
+        - 51
+    color_icon: true
+    color_value: false
+    secondary_info:
+      entity: sensor.solar_imported_power_daily_solar_edge
+      unit_of_measurement: KWH
+      decimals: 2
+  solar:
+    secondary_info:
+      entity: sensor.solar_panel_production_daily
+      unit_of_measurement: KWH
+      decimals: 2
+      color_value: false
+    entity: sensor.solar_panel_production_w
+    display_zero_state: true
+    display_zero_tolerance: 10
+    invert_state: false
+    use_metadata: false
+    color_icon: true
+    color:
+      - 48
+      - 166
+      - 68
+  battery:
+    entity: sensor.solaredge_b1_dc_power
+    state_of_charge: sensor.solaredge_b1_state_of_energy
+    display_state: one_way
+    invert_state: true
+    color_value: false
+    use_metadata: false
+    color_circle: true
+    color_icon: true
+    color:
+      consumption:
+        - 255
+        - 157
+        - 77
+      production:
+        - 74
+        - 255
+        - 61
+    state_of_charge_decimals: 1
+  home:
+    subtract_individual: false
+    override_state: false
+    color_value: true
+    color_icon: true
+    secondary_info:
+      entity: sensor.solar_house_consumption_daily
+      unit_of_measurement: KWH
+      decimals: 2
+    entity: sensor.solar_house_consumption_w
+  fossil_fuel_percentage: {}
+watt_threshold: 10000
+display_zero_lines:
+  mode: show
+  transparency: 50
+  grey_color:
+    - 189
+    - 189
+    - 189
