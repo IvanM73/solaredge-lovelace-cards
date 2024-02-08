@@ -39,14 +39,14 @@ series:
     type: area
     extend_to: false
     name: From Battery
-    color: rgb(125,255,0)
+    color: rgb(0,255,0)
     opacity: 1
     fill_raw: last
   - entity: sensor.solar_house_consumption_w
     type: area
     extend_to: false
     name: Consumtion
-    color: rgb(250,0,0)
+    color: rgb(250,125,0)
     opacity: 1
     fill_raw: last
     show:
@@ -55,6 +55,6 @@ series:
     type: area
     extend_to: false
     name: Self Consumtion
-    color: rgb(125,255,0)
+    color: rgb(0,125,255)
     opacity: 1
     fill_raw: last
