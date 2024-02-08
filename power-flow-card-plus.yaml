@@ -16,7 +16,7 @@ entities:
     color_value: false
     secondary_info:
       entity: sensor.solar_imported_power_daily_solar_edge
-      unit_of_measurement: KWH
+      unit_of_measurement: kWh
       decimals: 2
   solar:
     secondary_info:
@@ -60,7 +60,7 @@ entities:
     color_icon: true
     secondary_info:
       entity: sensor.solar_house_consumption_daily
-      unit_of_measurement: KWH
+      unit_of_measurement: kWh
       decimals: 2
     entity: sensor.solar_house_consumption_w
   fossil_fuel_percentage: {}
@@ -72,3 +72,6 @@ display_zero_lines:
     - 189
     - 189
     - 189
+kw_decimals: 2
+clickable_entities: true
+use_new_flow_rate_model: true
