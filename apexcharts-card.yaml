@@ -1,6 +1,6 @@
 type: custom:apexcharts-card
 header:
-  title: Produzione e consumo
+  title: Solar Production/Consumption
   show: true
   show_states: true
   colorize_states: true
@@ -8,7 +8,7 @@ header:
   disable_actions: true
 apex_config:
   chart:
-    height: 200
+    height: 300
     tipe: area
   stroke:
     width: 1
@@ -22,7 +22,7 @@ series:
   - entity: sensor.solar_panel_production_w
     type: area
     extend_to: false
-    name: Produzione solare
+    name: Production
     color: rgb(0,255,0)
     opacity: 1
     fill_raw: last
@@ -45,7 +45,7 @@ series:
   - entity: sensor.solar_house_consumption_w
     type: area
     extend_to: false
-    name: Consumo
+    name: Consumtion
     color: rgb(250,0,0)
     opacity: 1
     fill_raw: last
@@ -54,7 +54,7 @@ series:
   - entity: sensor.solaredge_i1_ac_power
     type: area
     extend_to: false
-    name: Autoconsumo
+    name: Self Consumtion
     color: rgb(125,255,0)
     opacity: 1
     fill_raw: last
