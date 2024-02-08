@@ -1,6 +1,8 @@
 Lovelace cards configuration to display solaradge  https://github.com/WillCodeForCats/solaredge-modbus-multi  HACS integration.
+
 Require: 
 https://github.com/flixlix/power-flow-card-plus
+
 https://github.com/RomRider/apexcharts-card
 
 
